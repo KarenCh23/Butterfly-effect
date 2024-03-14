@@ -14,10 +14,11 @@ export function Butterfly(props) {
   const { nodes, materials, animations } = useGLTF("./models/butterfly/butterfly.glb");
   const { actions } = useAnimations(animations, group);
 
-  // useEffect(() => {
-  //   actions.Object_0.timeScale = 0.15
-  //   actions.Object_0.play()
-  // })
+  useEffect(() => {
+    console.log(actions);
+    // actions.Object_0.timeScale = 0.15
+    // actions.Object_0.play()
+  })
 
   return (
     <group ref={group} {...props} dispose={null}>
