@@ -5,11 +5,17 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Butterfly } from "./models/Butterfly";
-import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import {
+  EffectComposer,
+  Bloom,
+  DepthOfField,
+  Vignette,
+} from "@react-three/postprocessing";
 
 function App() {
   return (
     <>
+    {/* Background color + light ambiance */}
       <color attach="background" args={["#000"]} />
       <ambientLight intensity={0.2} />
       <spotLight
@@ -22,6 +28,7 @@ function App() {
       />
       <Environment preset="warehouse" />
 
+{/* Effects on Butterflies elements */}
       <EffectComposer>
         <Bloom
           intensity={2}
@@ -29,8 +36,16 @@ function App() {
           luminanceSmoothing={0.9}
           height={1000}
         />
+        <DepthOfField
+          focusDistance={0}
+          focalLength={0.02}
+          bokehScale={5}
+          height={400}
+        />
+        <Vignette eskil={false} offset={.1} darkness={1.5} />
       </EffectComposer>
 
+{/* Scroll Butterflies */}
       <ScrollControls pages={6} damping={0.25}>
         <Scroll>
           <Butterfly
@@ -46,6 +61,7 @@ function App() {
           />
         </Scroll>
 
+{/* Scroll Text */}
         <Scroll html style={{ width: "100%" }}>
           <Container style={{ height: "100px", position: "relative" }}>
             <Row
