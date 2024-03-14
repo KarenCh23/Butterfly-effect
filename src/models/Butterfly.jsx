@@ -11,14 +11,14 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 export function Butterfly(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/butterfly/butterfly.glb");
+  const { nodes, materials, animations } = useGLTF("./models/butterfly/scene-transformed.glb");
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    console.log(actions);
-    // actions.Object_0.timeScale = 0.15
-    // actions.Object_0.play()
-  })
+    // console.log(actions);
+    actions.Object_0.timeScale = 0.15;
+    // actions.Object_0.play();
+  }, [])
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -544,6 +544,7 @@ export function Butterfly(props) {
                   </group>
                 </group>
                 <group
+                  visible={false}
                   name="Object_111"
                   position={[2.473, -1.185, 1.224]}
                   rotation={[-Math.PI / 2, 0, 0]}
@@ -1068,4 +1069,4 @@ export function Butterfly(props) {
   );
 }
 
-useGLTF.preload("./models/butterfly/butterfly.glb");
+useGLTF.preload("./models/butterfly/scene-transformed.glb");

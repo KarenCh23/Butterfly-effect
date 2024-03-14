@@ -62,17 +62,17 @@ function App() {
             floatingRange={[1, 1]} // Range of y-axis values the object will float within
           >
             <Butterfly
-              key={"butterfly_1"}
+              // key={"butterfly_1"}
               scale={0.05}
               position={[-10, -3, -6]}
             />
             <Butterfly
-              key={"butterfly_2"}
+              // key={"butterfly_2"}
               scale={0.05}
               position={[0, -2.5, 0]}
             />
             <Butterfly
-              key={"butterfly_3"}
+              // key={"butterfly_3"}
               scale={0.05}
               position={[10, -4, -10]}
             />
