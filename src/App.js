@@ -61,21 +61,21 @@ function App() {
             floatIntensity={0.2} // Up Down float intensity
             floatingRange={[1, 1]} // Range of y-axis values the object will float within
           >
-            <Butterfly
-              // key={"butterfly_1"}
+            {/* <Butterfly
+              key={"butterfly_1"}
               scale={0.05}
               position={[-10, -3, -6]}
-            />
+            /> */}
             <Butterfly
-              // key={"butterfly_2"}
+              key={"butterfly_2"}
               scale={0.05}
               position={[0, -2.5, 0]}
             />
-            <Butterfly
+            {/* <Butterfly
               // key={"butterfly_3"}
               scale={0.05}
               position={[10, -4, -10]}
-            />
+            /> */}
           </Float>
 
           {/* Middle Butterflies */}
@@ -85,7 +85,7 @@ function App() {
             floatIntensity={0.2}
             floatingRange={[1, 1]}
           >
-            <Butterfly
+            {/* <Butterfly
               key={"butterfly_1"}
               scale={0.05}
               position={[-1, -12.5, 0]}
@@ -94,7 +94,7 @@ function App() {
               key={"butterfly_2"}
               scale={0.05}
               position={[12, -14, -10]}
-            />
+            /> */}
           </Float>
 
           {/* Bottom Butterflies */}
@@ -104,9 +104,9 @@ function App() {
             floatIntensity={0.2}
             floatingRange={[1, 1]}
           >
-            <Butterfly scale={0.05} position={[-3, -19.5, 2]} />
+            {/* <Butterfly scale={0.05} position={[-3, -19.5, 2]} />
             <Butterfly scale={0.05} position={[8, -23, -10]} />
-            <Butterfly scale={0.05} position={[4, -24, 2]} />
+            <Butterfly scale={0.05} position={[4, -24, 2]} /> */}
           </Float>
 
           {/* Sparkles effect - To see if we keep this effect or not */}

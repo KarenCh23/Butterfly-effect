@@ -8,20 +8,36 @@ Title: Butterfly
 
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import * as THREE from 'three';
 
 export function Butterfly(props) {
+
+  // ! TEST WITH GTLF FILE DIRECTLY //
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("./models/butterfly/scene-transformed.glb");
-  const { actions } = useAnimations(animations, group);
+  const { nodes, materials, scene, animations } = useGLTF("./models/butterfly/scene.gltf", true);
+  const { actions, mixer } = useAnimations(animations, group);
 
   useEffect(() => {
-    // console.log(actions);
-    actions.Object_0.timeScale = 0.15;
+    // actions.Object_0.timeScale = 0.15;
     // actions.Object_0.play();
-  }, [])
+  }, [mixer]);
+
+
+
+// ! TEST WITH GTLF FILE DIRECTLY //
+
+// ? FIRST SOLUTION //
+// const group = useRef()
+// const { nodes, materials, animations } = useGLTF('./models/butterfly/scene.gltf')
+// const { actions } = useAnimations(animations, group)
+
+// useEffect(() => {
+//   actions.Object_0.timeScale = 0.15
+//   actions.Object_0.play()
+// })
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} object={scene} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="913812325ebb4106b80eca412a29f029abccleanermaterialmergergles">
@@ -1069,4 +1085,4 @@ export function Butterfly(props) {
   );
 }
 
-useGLTF.preload("./models/butterfly/scene-transformed.glb");
+useGLTF.preload("./models/butterfly/scene.gltf");
