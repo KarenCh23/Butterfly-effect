@@ -29,7 +29,7 @@ function App() {
         angle={1.3}
         penumbra={1}
         castShadow
-        intensity={2}
+        intensity={1}
         shadow-bias={-0.0001}
       />
       <Environment preset="warehouse" />
