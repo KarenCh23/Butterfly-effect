@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">Butterfly-effect project is an example of landing page for self-care application, including Three.js scroll-driven animations with description based on butterfly-effect concept that invite users to get the app.</p>
+<p align="left">Butterfly-effect project is a landing page project for self-care application, including Three.js scroll-driven animations with description based on butterfly-effect concept that invite users to get the app.</p>
 
 ###
 
