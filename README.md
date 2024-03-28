@@ -40,10 +40,9 @@
 
 ###
 
-<p align="left">
   * Factorization of butterfly component with scales and position props ( top / middle / bottom butterflies elements ).
   * Factorization of scroll text description
   * Add some animations effects on Get the App button element.
-</p>
+
 
 ###
