@@ -1,11 +1,5 @@
 import "./App.css";
-import {
-  ScrollControls,
-  Scroll,
-  Environment,
-  Float,
-  Sparkles,
-} from "@react-three/drei";
+import { ScrollControls, Scroll, Environment, Float } from "@react-three/drei";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -61,21 +55,21 @@ function App() {
             floatIntensity={0.2} // Up Down float intensity
             floatingRange={[1, 1]} // Range of y-axis values the object will float within
           >
-            {/* <Butterfly
+            <Butterfly
               key={"butterfly_1"}
               scale={0.05}
               position={[-10, -3, -6]}
-            /> */}
+            />
             <Butterfly
               key={"butterfly_2"}
               scale={0.05}
               position={[0, -2.5, 0]}
             />
-            {/* <Butterfly
-              // key={"butterfly_3"}
+            <Butterfly
+              key={"butterfly_3"}
               scale={0.05}
               position={[10, -4, -10]}
-            /> */}
+            />
           </Float>
 
           {/* Middle Butterflies */}
@@ -85,49 +79,59 @@ function App() {
             floatIntensity={0.2}
             floatingRange={[1, 1]}
           >
-            {/* <Butterfly
-              key={"butterfly_1"}
+            <Butterfly
+              key={"butterfly_4"}
               scale={0.05}
               position={[-1, -12.5, 0]}
             />
             <Butterfly
-              key={"butterfly_2"}
+              key={"butterfly_5"}
               scale={0.05}
               position={[12, -14, -10]}
-            /> */}
+            />
           </Float>
 
-          {/* Bottom Butterflies */}
+          {/* Bottom Butterflies 1 */}
           <Float
             speed={1}
             rotationIntensity={2}
             floatIntensity={0.2}
             floatingRange={[1, 1]}
           >
-            {/* <Butterfly scale={0.05} position={[-3, -19.5, 2]} />
-            <Butterfly scale={0.05} position={[8, -23, -10]} />
-            <Butterfly scale={0.05} position={[4, -24, 2]} /> */}
+            <Butterfly
+              key={"butterfly_6"}
+              scale={0.05}
+              position={[-3, -19.5, 2]}
+            />
+            <Butterfly
+              key={"butterfly_7"}
+              scale={0.05}
+              position={[8, -23, -10]}
+            />
+            <Butterfly
+              key={"butterfly_8"}
+              scale={0.05}
+              position={[4, -24, 2]}
+            />
           </Float>
-
-          {/* Sparkles effect - To see if we keep this effect or not */}
-          {/* <Sparkles
-            noise={0}
-            count={500}
-            speed={0.01}
-            size={0.6}
-            color={"#FFD2BE"}
-            opacity={10}
-            scale={[20, 100, 20]}
-          ></Sparkles>
-          <Sparkles
-            noise={0}
-            count={50}
-            speed={0.01}
-            size={10}
-            color={"#FFF"}
-            opacity={2}
-            scale={[30, 100, 10]}
-          ></Sparkles> */}
+          {/* Bottom Butterflies 2 */}
+          <Float
+            speed={1}
+            rotationIntensity={0.5}
+            floatIntensity={0.1}
+            floatingRange={[2, 2]}
+          >
+            <Butterfly
+              key={"butterfly_7"}
+              scale={0.05}
+              position={[15, -30, -40]}
+            />
+            <Butterfly
+              key={"butterfly_8"}
+              scale={0.1}
+              position={[-10, -60, -40]}
+            />
+          </Float>
         </Scroll>
 
         {/* Scroll Text */}
@@ -205,8 +209,7 @@ function App() {
               <Col xs={6}>
                 <div>
                   <h1 className="scroll-text" style={{ marginBottom: "0px" }}>
-                    Drifting through life <br />
-                    With no help or guidance
+                    Do you know the <br /> Butterfly effect ?
                   </h1>
                 </div>
               </Col>
@@ -225,8 +228,8 @@ function App() {
               <Col xs={8}>
                 <div>
                   <h1 className="scroll-text" style={{ marginBottom: "0px" }}>
-                    But there is hope...
-                    <br /> and people who can help
+                    One little step can <br />
+                    change everything
                   </h1>
                 </div>
               </Col>
@@ -255,7 +258,7 @@ function App() {
                     To get your life back
                   </h2>
                   <Button variant="outline-light" size="lg">
-                    Get help now
+                    Get the App
                   </Button>{" "}
                 </div>
               </Col>

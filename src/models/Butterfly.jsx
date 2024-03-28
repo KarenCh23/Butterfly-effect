@@ -15,9 +15,10 @@ export function Butterfly(props) {
   const { actions, mixer } = useAnimations(animations, group);
 
   useEffect(() => {
+    // to slow down the animation on butterfly wings
     actions.Object_0.timeScale = 0.20;
-    // actions.Object_0.play();
-  }, [mixer]);
+    actions.Object_0.play();
+  }, [mixer, actions]);
 
   return (
     <group ref={group} {...props} object={scene} dispose={null}>
@@ -40,8 +41,7 @@ export function Butterfly(props) {
                   morphTargetInfluences={nodes.Wing_1.morphTargetInfluences}
                 />
               </group>
-                {/* BUG WING IS HERE - SLOW DOWN IF VISIBLE=FALSE ? */}
-              <group  name="MorphMainGroup_1">
+              <group name="MorphMainGroup_1">
                 <mesh
                   visible={false}
                   name="Wing_1_1"
