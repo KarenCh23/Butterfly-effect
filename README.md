@@ -2,10 +2,6 @@
 
 ###
 
-<h3 align="left">Status : In Progress</h3>
-
-###
-
 <p align="left">Butterfly-effect is a landing page project for self-care / mental health application, including Three.js scroll-driven animations with description based on butterfly-effect concept that invite users to get the app.</p>
 
 ###
@@ -37,5 +33,16 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  />
 </div>
+
+###
+
+<h2 align="left">Version 2 upgrades</h2>
+
+###
+
+  * Factorization of butterfly component with scales and position props ( top / middle / bottom butterflies elements ).
+  * Factorization of scroll text description
+  * Add some animations effects on Get the App button element.
+
 
 ###
